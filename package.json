@@ -1,0 +1,42 @@
+{
+  "name": "@uistate/router",
+  "version": "1.0.0",
+  "description": "SPA router for EventState stores — routing is just state",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "router.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "router",
+    "spa",
+    "eventstate",
+    "uistate",
+    "state-management",
+    "path-based",
+    "vanilla-js",
+    "framework-agnostic"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ImsirovicAjdin/uistate-router"
+  },
+  "homepage": "https://uistate.com",
+  "peerDependencies": {
+    "@uistate/core": ">=5.6.0"
+  },
+  "peerDependenciesMeta": {
+    "@uistate/core": {
+      "optional": true
+    }
+  }
+}
