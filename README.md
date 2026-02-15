@@ -236,6 +236,27 @@ The router sets attributes on `<html>` for CSS-driven transitions:
 }
 ```
 
+## Testing
+
+Two-layer testing architecture:
+
+**`self-test.js`** — Zero-dependency self-test (35 assertions). Runs automatically on `npm install` via `postinstall`. Tests the pure-function core: pattern compilation, path normalization, route resolution, and URL-encoded param decoding.
+
+```bash
+node self-test.js
+```
+
+**`tests/router.test.js`** — Integration tests via `@uistate/event-test` (13 tests). Tests the store-driven routing patterns: `setMany` for atomic route updates, wildcard subscriptions, `ui.route.go` navigation, transition state, and type generation.
+
+```bash
+npm test
+```
+
+| Suite | Assertions | Dependencies |
+|-------|-----------|-------------|
+| `self-test.js` | 35 | none (zero-dep) |
+| `tests/router.test.js` | 13 | `@uistate/event-test`, `@uistate/core` |
+
 ## Philosophy
 
 Routing is not special. It's a `set` call to a path in a JSON tree. The router writes `ui.route.*`, and anything that cares about routing subscribes to `ui.route.*`. The router doesn't know about your nav, your breadcrumbs, your analytics, or your loading spinners. They all subscribe independently. That's UIState: EventState + Routing.

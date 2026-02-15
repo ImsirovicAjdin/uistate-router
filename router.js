@@ -1,4 +1,4 @@
-// @uistate/router — SPA router factory for EventState stores
+// @uistate/router: SPA router factory for EventState stores
 // Routing is just state: navigate() writes to store paths, components subscribe.
 
 /**

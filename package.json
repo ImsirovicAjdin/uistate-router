@@ -1,16 +1,22 @@
 {
   "name": "@uistate/router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SPA router for EventState stores — routing is just state",
   "main": "index.js",
   "module": "index.js",
   "type": "module",
+  "scripts": {
+    "postinstall": "node self-test.js",
+    "test": "node tests/router.test.js",
+    "self-test": "node self-test.js"
+  },
   "exports": {
     ".": "./index.js"
   },
   "files": [
     "index.js",
     "router.js",
+    "self-test.js",
     "README.md",
     "LICENSE"
   ],
